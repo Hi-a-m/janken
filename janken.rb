@@ -33,11 +33,6 @@ def janken
   end
 end
 
-  next_game = true
-
-  while next_game do
-    next_game = janken
-  end
 
   
 def achimuite_hoi
@@ -68,8 +63,21 @@ def achimuite_hoi
   end  
 end
   
-  next_game = true
   
-  while achimuite_hoi do
-      next_game = janken
+def game
+  if janken == true
+    return true
+  else
+  if achimuite_hoi == true
+    return true
+  else
+   return false
+  end
+  end
+end
+   
+  next_game = true
+ 
+  while  next_game
+    next_game = game
   end
